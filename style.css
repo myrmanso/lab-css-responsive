@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 100px
+}
+
+nav > div {
+
+}
+
+nav a, nav span {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #5BD860;
+  transition: color 2s linear;
+  /* transition-property: color;
+  transition-duration: 2s;
+  transition-timing-function: linear; */
+}
+
+nav span {
+  font-size: 24px;
+}
+
+nav img {
+  width: 200px;
+  height: auto;
+}
+
+nav > div + div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+}
+
+/* nav a + a {
+  margin-left: 30px;
+} */
+
+body > img {
+  width: 300px;
+  position: absolute;
+  bottom: calc(50% - 150px);
+  left: calc(50% - 150px);
+  text-align: center;
+  animation-name: loading-logo-animation;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+@keyframes loading-logo-animation {
+  0% {
+    transform: rotate(0deg);
+    /* width: 300px; */
+  }
+
+  /* 30% {
+    width: 500px
+  } */
+
+  100% {
+    transform: rotate(360deg);
+    /* width: 600px; */
+  }
+}
+
+#main-content-container {
+  display: none;
+}
