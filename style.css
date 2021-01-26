@@ -1,9 +1,28 @@
+/* BASIC STYLING FOR ALL OUR CONTENT */
 * {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
+
+/* FONT SIZE REFERENCE FOR "rem" UNIT USAGE */
+html {
+  font-size: 16px;
+}
+
+
+/* BODY BACKGROUND IMAGE */
+body {
+  background-image: url("https://www.scdn.co/i/home/lieVariants/bursts-tablet.svg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: right 40% center;
+  background-color: #2940a8;
+}
+
+/* NAV BAR STYLING */
 nav {
   background-color: #000;
   display: flex;
@@ -13,10 +32,6 @@ nav {
   height: 100px
 }
 
-nav > div {
-
-}
-
 nav a, nav span {
   color: #fff;
   text-decoration: none;
@@ -24,14 +39,14 @@ nav a, nav span {
 
 nav a:hover {
   color: #5BD860;
-  transition: color 2s linear;
+  transition: color 0.3s linear;
   /* transition-property: color;
   transition-duration: 2s;
   transition-timing-function: linear; */
 }
 
 nav span {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 nav img {
@@ -46,10 +61,61 @@ nav > div + div {
   width: 450px;
 }
 
-/* nav a + a {
-  margin-left: 30px;
-} */
+nav > div > button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url("https://img.icons8.com/material-outlined/344/ffffff/top-menu.png");
+  background-size: cover;
+  cursor: pointer;
+  display: none;
+}
 
+
+/* MAIN CONTENT STYLING */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+main > h1 {
+  color: #1AD760;
+  font-size: 6rem;
+  width: 600px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+main > p {
+  color: #1AD760;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+main button {
+  color: #2A3FA8;
+  font-weight: 700;
+  text-align: center;
+  background-color: #1AD760;
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 100px;
+  letter-spacing: 0.09rem;
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: white;
+  transition: background-color 0.3s linear;
+}
+
+
+/* LOADING LOGO EFFECT STYLING */
 body > img {
   width: 300px;
   position: absolute;
@@ -81,4 +147,59 @@ body > img {
 
 #main-content-container {
   display: none;
+}
+
+
+/* RESPONSIVE MEDIA QUERY STYLING */
+/* For screen width size between 768 and 1024 pixels */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background-size: 160%;
+  }
+
+  nav > div + div {
+    width: 350px;
+  }
+}
+
+/* For screen width size lower than 768px */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    background-size: 185%;
+  }
+
+  nav {
+    height: 70px;
+    padding: 0 20px;
+    width: 100vw;
+  }
+
+  nav img {
+    width: 120px;
+    height: auto;
+  }
+
+  nav > div a, span {
+    display: none;
+  }
+
+  nav > div + div {
+    width: auto;
+  }
+
+  nav > div > button {
+    display: block;
+  }
+
+  main > h1 {
+    width: 80vw;
+  }
 }
