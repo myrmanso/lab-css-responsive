@@ -149,6 +149,16 @@ body > img {
 
 
 /* RESPONSIVE MEDIA QUERY STYLING */
+
+/* MAIN SCREEN SIZES BREAKPOINTS:
+
+  BELOW 480px --- MOBILE
+  480px - 768px --- MOBILE / TABLET
+  768px - 1024px --- TABLET
+  1024px - 1280px --- WEB
+  ABOVE 1280px --- WEB (HIGHER DEFINITIONS)
+*/
+
 /* For screen width size between 768 and 1024 pixels */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   html {
