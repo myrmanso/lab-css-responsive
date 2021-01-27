@@ -211,3 +211,21 @@ body > img {
     width: 80vw;
   }
 }
+
+/* For screen width size lower than 480px */
+
+@media only screen and (max-width: 480px) {
+  nav > div a, span {
+    display: none;
+  }
+
+  nav > div + div {
+    width: auto;
+  }
+
+  nav > div > button {
+    display: block;
+  }
+
+}
+
